@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back"
+    tools:context=".ActSplash">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:id="@+id/tv_ride_tag"
+            android:textColor="#ffffff"
+            android:text="RIDESCAN"
+            android:textSize="35dp" />
+
+        <TextView
+            android:id="@+id/tv_tag_power"
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/tv_tag_mahle"
+            android:layout_centerHorizontal="true"
+            android:text="powered by" />
+
+        <TextView
+            android:id="@+id/tv_tag_mahle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:textSize="24dp"
+            android:textColor="#1C2664"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="25dp"
+            android:text="MAHLE" />
+
+
+    </RelativeLayout>
+
+</FrameLayout>
