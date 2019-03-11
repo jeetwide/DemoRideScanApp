@@ -1,6 +1,7 @@
 package demoapp.jeetendra.Adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,6 +12,7 @@ import android.widget.Toast;
 
 import java.util.List;
 
+import demoapp.jeetendra.ActChooseBike;
 import demoapp.jeetendra.R;
 import demoapp.jeetendra.models.ModelVCI;
 
@@ -46,10 +48,14 @@ public class VciAdapter extends RecyclerView.Adapter<VciAdapter.VciViewHolder> {
             @Override
             public void onClick(View v) {
                 Toast.makeText(mCtx, product.getVciTitle()+" Clicked", Toast.LENGTH_SHORT).show();
+                Intent in = new Intent(v.getContext(),ActChooseBike.class);
+                v.getContext().startActivity(in);
+
             }
         });
 
     }
+
 
 
     @Override

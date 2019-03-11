@@ -5,9 +5,20 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 
+import com.yarolegovich.discretescrollview.DiscreteScrollView;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import demoapp.jeetendra.Adapters.ChooseBikeAdapter;
+import demoapp.jeetendra.models.ModelBike;
+import demoapp.jeetendra.models.ModelVCI;
+
 public class ActChooseBike extends AppCompatActivity {
 
     private Toolbar mTopToolbar;
+   // List<ModelVCI> vciList;
+    List<ModelBike> bikeList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +45,23 @@ public class ActChooseBike extends AppCompatActivity {
             }
         });
 
+        //initializing the vcilist
+        bikeList = new ArrayList<>();
+/*
+        vciList.add(new ModelVCI("VCI000123456"));
+        vciList.add(new ModelVCI("VCI000123453"));
+        vciList.add(new ModelVCI("VCI000123893"));
+        vciList.add(new ModelVCI("VCI000123329"));
+        vciList.add(new ModelVCI("VCI000123213"));
+*/
+
+       bikeList.add(new ModelBike(R.drawable.motorcycle_png3137));
+       bikeList.add(new ModelBike(R.drawable.motorcycle_png3142));
+       bikeList.add(new ModelBike(R.drawable.motorcycle_png3147));
+       bikeList.add(new ModelBike(R.drawable.bike11));
+        DiscreteScrollView scrollView = findViewById(R.id.picker);
+
+        scrollView.setAdapter(new ChooseBikeAdapter(ActChooseBike.this,bikeList));
 
     }
 }
