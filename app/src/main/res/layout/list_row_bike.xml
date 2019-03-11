@@ -26,7 +26,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/iv_bike"
-                android:text="Apache RR 312"
+                android:text="Apache RR 3122"
                 android:id="@+id/tv_bikename"/>
 
         </RelativeLayout>
