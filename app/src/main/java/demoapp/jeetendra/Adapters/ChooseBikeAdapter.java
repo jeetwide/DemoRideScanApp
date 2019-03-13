@@ -1,6 +1,7 @@
 package demoapp.jeetendra.Adapters;
 
 import android.content.Context;
+import android.graphics.Typeface;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -45,7 +46,15 @@ public class ChooseBikeAdapter extends RecyclerView.Adapter<ChooseBikeAdapter.Vc
         final ModelBike product = bikeList.get(position);
 
         //binding the data with the viewholder views
-       // holder.textViewTitle.setText(product.getChoosebike());
+        holder.tv_bikename.setText(product.getBikename());
+
+        holder.rl_vci.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(mCtx, product.getBikename()+" clicked!!!", Toast.LENGTH_SHORT).show();
+            }
+        });
+
 
         Glide.with(holder.itemView.getContext())
                 .load(bikeList.get(position).getChoosebike())
@@ -61,16 +70,21 @@ public class ChooseBikeAdapter extends RecyclerView.Adapter<ChooseBikeAdapter.Vc
     class VciViewHolder extends RecyclerView.ViewHolder {
 
         //TextView textViewTitle, textViewShortDesc, textViewRating, textViewPrice;
-       // RelativeLayout rl_vci;
+       RelativeLayout rl_vci;
 
         ImageView iv;
+        TextView tv_bikename;
+
+        Typeface tf = Typeface.createFromAsset(itemView.getContext().getAssets(),"NexaRustSans-Black.otf");
 
         public VciViewHolder(View itemView) {
             super(itemView);
 
             //textViewTitle = itemView.findViewById(R.id.textViewTitle);
-           // rl_vci = itemView.findViewById(R.id.rl_vci);
+            rl_vci = itemView.findViewById(R.id.rl_vci);
             iv = itemView.findViewById(R.id.iv_bike);
+            tv_bikename = itemView.findViewById(R.id.tv_bikename);
+            tv_bikename.setTypeface(tf);
 
         }
     }

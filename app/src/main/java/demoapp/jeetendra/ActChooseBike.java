@@ -55,10 +55,10 @@ public class ActChooseBike extends AppCompatActivity {
         vciList.add(new ModelVCI("VCI000123213"));
 */
 
-       bikeList.add(new ModelBike(R.drawable.motorcycle_png3137));
-       bikeList.add(new ModelBike(R.drawable.motorcycle_png3142));
-       bikeList.add(new ModelBike(R.drawable.motorcycle_png3147));
-       bikeList.add(new ModelBike(R.drawable.bike11));
+       bikeList.add(new ModelBike(R.drawable.motorcycle_png3137,"Apache RTR 160"));
+       bikeList.add(new ModelBike(R.drawable.motorcycle_png3142,"Apache RTR 200"));
+       bikeList.add(new ModelBike(R.drawable.motorcycle_png3147,"Apache RTR 400"));
+       bikeList.add(new ModelBike(R.drawable.motor987,"Apache RTR 350"));
         DiscreteScrollView scrollView = findViewById(R.id.picker);
 
         scrollView.setAdapter(new ChooseBikeAdapter(ActChooseBike.this,bikeList));

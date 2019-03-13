@@ -3,9 +3,19 @@ package demoapp.jeetendra.models;
 public class ModelBike {
 
     private int choosebike;
+    private String bikename;
 
-    public ModelBike(int choosebike) {
+    public String getBikename() {
+        return bikename;
+    }
+
+    public void setBikename(String bikename) {
+        this.bikename = bikename;
+    }
+
+    public ModelBike(int choosebike, String bikename) {
         this.choosebike = choosebike;
+        this.bikename = bikename;
     }
 
     public int getChoosebike() {
